@@ -24,7 +24,3 @@ RUN apt-get update \
 && apt-get remove -y $BUILD_DEPENDENCIES \
 && apt-get auto-remove -y \
 && rm -rf /var/lib/apt/lists/*
-
-
-FROM base as development
-RUN pip install --no-cache-dir watchdog  pyyaml argh
