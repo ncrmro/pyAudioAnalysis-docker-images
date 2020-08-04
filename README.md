@@ -2,19 +2,22 @@
 
 Built for
 * amd64
+* arm64
+* arm6
 * arm7
 
 ## Building
 
+Make sure you have experimental support enabled.
+
 ```
-docker build --target base \
-       --cache-from=ncrmro/py-audio-analysis \
-       --build-arg BASE_IMAGE=python:3.8.5-slim-buster \
-       --tag ncrmro/py-audio-analysis \
-       --tag ncrmro/py-audio-analysis:0.3.5 \
-       .
+docker buildx create --name pibuilder --use
 ```
 
-`docker push ncrmro/py-audio-analysis`
-
-`docker push ncrmro/py-audio-analysis:0.3.5`
+```
+docker buildx build \
+    --platform linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6 \ 
+    -t ncrmro/py-audio-analysis:latest \
+    -t ncrmro/py-audio-analysis:0.3.5 
+    --push .
+```
