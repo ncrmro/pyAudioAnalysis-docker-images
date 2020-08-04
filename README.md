@@ -1,4 +1,4 @@
-# Pre Build pyAudioAnalysis Docker image
+# Pre-Built pyAudioAnalysis Docker image
 
 Built for
 * amd64
