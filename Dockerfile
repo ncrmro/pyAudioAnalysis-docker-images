@@ -5,7 +5,7 @@ ENV PYTHONPATH "${PYTHONPATH}:/app"
 
 ##
 # Install any runtime depenencies here
-ENV RUNTIME_DEPENDENCIES="libmagic-dev libgomp1"
+ENV RUNTIME_DEPENDENCIES="ffmpeg libmagic-dev libgomp1"
 
 RUN apt-get update \
     && apt-get install -y $RUNTIME_DEPENDENCIES \
