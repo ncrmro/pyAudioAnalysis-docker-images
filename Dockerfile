@@ -12,7 +12,7 @@ RUN apt-get update \
     && pip install Cython \
 && rm -rf /var/lib/apt/lists/*
 
-ENV BUILD_DEPENDENCIES="build-essential pkg-config libatlas-base-dev libblas3 liblapack3 liblapack-dev libblas-dev gfortran libfreetype6-dev"
+ENV BUILD_DEPENDENCIES="build-essential git pkg-config libatlas-base-dev libblas3 liblapack3 liblapack-dev libblas-dev gfortran libfreetype6-dev"
 
 COPY requirements.txt /app/requirements.txt
 
