@@ -4,7 +4,7 @@ git+git://github.com/tyiannak/pyAudioAnalysis.git@4c7c2cfa068dcdd72427d106ae64f3
 
 matplotlib==3.1.2
 simplejson==3.16.0
-scipy==1.4.1
+scipy==1.10.0
 numpy==1.18.1
 hmmlearn==0.2.2
 eyeD3==0.8.12
